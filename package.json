@@ -1,0 +1,24 @@
+{
+  "name": "readme_creator",
+  "version": "1.0.0",
+  "description": "Through a series of questions, create an in depth readme file for any project you may be working on.",
+  "main": "index.js",
+  "scripts": {
+    "test": "TEST"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffreymcfarland/readme_creator.git"
+  },
+  "author": "jeffreymcfarland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffreymcfarland/readme_creator/issues"
+  },
+  "homepage": "https://github.com/jeffreymcfarland/readme_creator#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "inquirer": "^7.1.0"
+  }
+}
