@@ -40,7 +40,7 @@ inquirer.prompt(question).then(answer => {
 });
 
 
-var nextQuestions = [
+const nextQuestions = [
     {
         type: "input",
         name: "Title",
@@ -49,27 +49,41 @@ var nextQuestions = [
     {
         type: "input",
         name: "Description",
-        message: "Please give a description of your project."
+        message: "Please give a brief description of your project."
     },
     {
-        type: "checkbox",
-        name: "Table of Contents",
-        message: "Select which of the following you want to include in the Table of Contents",
-        choices: [
-            "Installation",
-            "Usage",
-            "License",
-            "Contributing",
-            "Tests",
-            "Questions"
-        ]
+        type: "input",
+        name: "Installation",
+        message: "What are the steps to installing your project?"
+    },
+    {
+        type: "input",
+        name: "Usage",
+        message: "Describe to the user how to use your project."
+    },
+    {
+        type: "list",
+        name: "License",
+        message: "Which License are you using for your project?",
+        choices: ["MIT", "GPLv2", "Apache", "Other"]
+    },
+    {
+        type: "input",
+        name: "Contributing",
+        message: "Please list the names of anyone who contributed to this project, each name separated by a comma."
     }
 ];
 
 function nextPrompt() {
 
     inquirer.prompt(nextQuestions).then(answers => {
+
         console.log(answers);
-    });
+
+        if (answers.License === "Other") {
+            console.log("-----Please update License section to include which license you decided to use.");
+        };
+
+    });    
 
 };
