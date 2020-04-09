@@ -4,6 +4,8 @@ const axios = require("axios");
 
 var inquirer = require("inquirer");
 
+inquirer.registerPrompt('emoji', require('inquirer-emoji'))
+
 console.log("Welcome to the Readme Creator!");
 console.log("------------------------------------")
 
@@ -49,12 +51,17 @@ const nextQuestions = [
     {
         type: "input",
         name: "Description",
-        message: "Please give a brief description of your project."
+        message: "Give a brief description about this project."
     },
     {
-        type: "input",
+        type: "emoji",
+        name: "projectEmoji",
+        message: "Find an emoji that best describes your project:"
+    },
+    {
+        type: "confirm",
         name: "Installation",
-        message: "What are the steps to installing your project?"
+        message: "Is there any dependencies your app needs installed?"
     },
     {
         type: "input",
@@ -77,8 +84,6 @@ const nextQuestions = [
 function nextPrompt() {
 
     inquirer.prompt(nextQuestions).then(answers => {
-
-        console.log(answers);
 
         if (answers.License === "Other") {
             console.log("-----Please update License section to include which license you decided to use.");
