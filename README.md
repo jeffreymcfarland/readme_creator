@@ -6,6 +6,10 @@
 This project helps you create a readme file for your own projects. So you can spend less time on your readme and more time coding your application!
 
 ***
+## Preview
+![gif](assets/readme_gif.gif)
+
+***
 ## Table of Contents
 1. [Install](#install)
 2. [Usage](#usage)

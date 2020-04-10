@@ -1,3 +1,5 @@
+// Require all installation packages
+
 require("dotenv").config()
 
 const axios = require("axios");
@@ -12,7 +14,7 @@ console.log("Welcome to the Readme Creator!");
 console.log("------------------------------------")
 
 
-
+// Questions for inquirer prompts
 
 const nextQuestions = [
     {
@@ -63,17 +65,20 @@ const nextQuestions = [
     }
 ];
 
+// Run prompts for inquirer
 
     inquirer.prompt(nextQuestions).then(answers => {
 
 
         const username = answers.username;
 
+// Axios call to get information from github profile
+
             axios.get(`https://api.github.com/users/${username}`, {
             headers: {"Authorization": `token ${process.env.JM_TOKEN}`}
             })
             .then(function (response) {
-            // handle success
+// Assign all inquirer answers and response from axios call to const variables 
 
             const avatar = response.data.avatar_url;
             const email = response.data.email;
@@ -96,6 +101,8 @@ const nextQuestions = [
     
             const license = answers.License;
             const contributing = answers.Contributing.split(",").join("\n\n");
+
+// Create markdown const variable to use for generated md file
     
             const markdown =
 `
@@ -148,7 +155,9 @@ ${contributing}
 * Email: <${email}>
 `
     
-            fs.writeFile("test.md", markdown, (err) => {
+// Write the generated markdown to the new md file
+
+            fs.writeFile("README.md", markdown, (err) => {
                 if (err) {
                     return console.log(err);
                 };
@@ -160,6 +169,5 @@ ${contributing}
             console.log(error);
             });
 
-        
     });    
 
