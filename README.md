@@ -1,13 +1,22 @@
+
 # <div align="center">Readme Creator</div>
 
-## About
+## 📝 About
 
-The Readme Creator will allow a user to generate their very own readme through a series of inquirer questions. The application will then apply those answers to a new readme file. This way the user can spend less time on their readme and more time coding their application!
+This project helps you create a readme file for your own projects. So you can spend less time on your readme and more time coding your application!
+
+***
+## Table of Contents
+1. [Install](#install)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Contact Me](#contact-me)
 
 ***
 ## Install
 
-To install this app, clone this repo and run 
+To install dependencies in this app, clone this repo and run 
 ```
 npm install
 ```
@@ -19,20 +28,21 @@ To use this app, simply run
 ```
 node index
 ```
-in the vs terminal inside the file folder. Then read each inquirer question carefully and answer the questions about your project. Once you finish with the questions, a brand new readme file will be created for you!
+in the vs terminal. 
+Answer inquirer questions about your projects when prompted in the terminal. All of your answers will then be put into a newly generated readme file for your next project.
 
 ***
+## License
 
 ![badge](https://img.shields.io/badge/License-MIT-success)
 
 ***
-
 ## Contributing
 
-Jeffrey McFarland
+jeffreymcfarland
 
 ***
-## <div align="center">Contact Me</div>    
-<!-- ![github bio picture](https://avatars1.githubusercontent.com/u/59814218?v=4) -->
+## Contact Me    
+
 <kbd><img src="https://avatars1.githubusercontent.com/u/59814218?v=4" /></kbd> 
 * Email: <jlmcfarlandj@gmail.com>
