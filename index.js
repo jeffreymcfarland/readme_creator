@@ -157,7 +157,7 @@ ${contributing}
     
 // Write the generated markdown to the new md file
 
-            fs.writeFile("README.md", markdown, (err) => {
+            fs.writeFile("new.md", markdown, (err) => {
                 if (err) {
                     return console.log(err);
                 };
